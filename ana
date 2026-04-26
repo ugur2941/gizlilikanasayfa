@@ -1,1 +1,236 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - FUTV</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22; /* FUTV için turuncu tonu */
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .language-selector {
+            text-align: center;
+            margin-bottom: 40px;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+
+        .lang-btn {
+            background: var(--card-bg);
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .policy-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            font-size: 1.3em;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .last-updated {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 0;
+                padding: 15px;
+            }
+            .policy-card {
+                padding: 20px;
+            }
+        }
+    </style>
+    <script>
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                
+                // Buton durumlarını güncelle
+                document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+                document.getElementById('btn-' + id).classList.add('active');
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="language-selector">
+            <button id="btn-turkish" class="lang-btn active" onclick="scrollToSection('turkish')">Türkçe</button>
+            <button id="btn-english" class="lang-btn" onclick="scrollToSection('english')">English</button>
+        </div>
+
+        <div id="turkish" class="policy-card">
+            <h1>FUTV Gizlilik Politikası</h1>
+            <span class="last-updated">Son Güncelleme: 5 Mart 2026</span>
+
+            <p>Bu Gizlilik Politikası, <strong>FUTV</strong> uygulamasını ("Hizmet", "Uygulama") kullandığınızda geçerli olan gizlilik uygulamalarını açıklamaktadır. Ben (<strong>Uğur Ö.</strong>, "Geliştirici", "Ben") bireysel bir geliştiriciyim ve gizliliğinize saygı duyuyorum. Hizmeti kullanarak, bu Gizlilik Politikasına uygun olarak bilgi işlenmesini kabul etmiş olursunuz.</p>
+
+            <h2>1. Geliştirici Tarafından Toplanan Bilgiler</h2>
+            <p>Geliştirici olarak, Hizmet aracılığıyla sizden doğrudan kişisel olarak tanımlanabilir herhangi bir bilgi (isim, e-posta, telefon, konum vb.) toplamıyorum ve saklamıyorum.</p>
+            <ul>
+                <li><strong>İstek ve Öneri Gönderme:</strong> Uygulama içindeki bu özelliği kullanırsanız, cihazınızdaki e-posta uygulaması üzerinden bana bir e-posta iletilir. Bu bilgiler yalnızca geri bildiriminize yanıt vermek amacıyla kullanılır ve üçüncü taraflarla paylaşılmaz.</li>
+            </ul>
+
+            <h2>2. Üçüncü Taraf Hizmetleri</h2>
+            <p>Uygulamanın işleyişi ve ücretsiz kalabilmesi için aşağıdaki üçüncü taraf hizmetleri kullanılmaktadır. Bu hizmetler kendi politikalarına göre teknik veriler toplayabilir:</p>
+            <ul>
+                <li><strong>Reklamcılık (Google AdMob & Unity Ads):</strong> İlgi alanlarınıza uygun reklamlar sunmak amacıyla Reklam Kimliği (Advertising ID), cihaz türü, IP adresi ve cihaz konumu gibi anonim teknik verileri toplayabilirler.</li>
+                <li><strong>Analitik (Firebase):</strong> Uygulama hatalarını tespit etmek ve performans iyileştirmesi yapmak için anonim çökme raporları toplar.</li>
+                <li><strong>YouTube Oynatıcı:</strong> YouTube yayınlarını oynatmak için YouTube Android Player API kullanılır. Bu etkileşim Google'ın gizlilik politikasına tabidir.</li>
+            </ul>
+
+            <h2>3. Çerezler (Cookies) ve Cihaz Tanımlayıcılar</h2>
+            <p>Uygulamamızı ücretsiz sunabilmek için üçüncü taraf reklam şirketleriyle (örneğin Google AdMob) çalışıyoruz. Bu şirketler, size kişiselleştirilmiş reklamlar gösterebilmek, reklam performansını ölçmek ve sahtekarlığı önlemek amacıyla cihaz tanımlayıcılarınızı (ör. Android Reklam Kimliği), yerel depolama teknolojilerini ve benzer araçları kullanabilir.</p>
+
+            <h2>4. Bilgilerin Kullanım Amacı</h2>
+            <ul>
+                <li>Hizmetin sürekliliğini sağlamak.</li>
+                <li>Uygulama hatalarını tespit edip düzeltmek.</li>
+                <li>Uygulamanın ücretsiz kalmasını desteklemek için kişiselleştirilmiş veya bağlamsal reklamlar göstermek.</li>
+            </ul>
+
+            <h2>5. Bilgilerin Paylaşımı</h2>
+            <p>Doğrudan topladığım hiçbir kişisel bilgiyi üçüncü taraflarla paylaşmam. Uygulama bir VPN veya trafik yönlendirme teknolojisi içermediği için internet trafiğiniz izlenmez.</p>
+
+            <h2>6. Çocukların Gizliliği</h2>
+            <p>Bu Hizmet 13 yaşın altındaki kişilere yönelik değildir. Bilerek 13 yaşın altındaki çocuklardan veri toplamıyorum.</p>
+
+            <h2>7. Avrupa Ekonomik Alanı (EEA) ve Birleşik Krallık Kullanıcı Hakları (GDPR)</h2>
+            <p>Avrupa Ekonomik Alanı (EEA) veya Birleşik Krallık'ta (UK) bulunuyorsanız, kişisel verilerinizin (örneğin cihaz IP adresi, reklam kimliği) işlenmesi açık rızanıza (Consent) veya meşru menfaatimize (Legitimate Interest) dayanmaktadır. Genel Veri Koruma Tüzüğü (GDPR) kapsamında aşağıdaki haklara sahipsiniz:</p>
+            <ul>
+                <li><strong>Bilgi Edinme ve Erişim:</strong> Sizinle ilgili hangi verilerin toplandığını öğrenme hakkı.</li>
+                <li><strong>Rızayı Geri Çekme (Withdraw Consent):</strong> Kişiselleştirilmiş reklamlar için verdiğiniz onayı dilediğiniz zaman uygulama içindeki gizlilik ayarları veya menü üzerinden değiştirebilir veya geri çekebilirsiniz.</li>
+                <li><strong>İtiraz Etme:</strong> Verilerinizin işlenmesine itiraz etme hakkı.</li>
+            </ul>
+
+            <h2>8. İletişim</h2>
+            <p>Gizlilik politikamız veya veri haklarınız ile ilgili sorularınız için bana ulaşabilirsiniz:</p>
+            <p><strong>E-posta:</strong> <a href="mailto:ugur2941@gmail.com">ugur2941@gmail.com</a></p>
+        </div>
+
+        <div id="english" class="policy-card">
+            <h1>FUTV Privacy Policy</h1>
+            <span class="last-updated">Last Updated: March 5, 2026</span>
+
+            <p>This Privacy Policy describes the privacy practices for the <strong>FUTV</strong> application ("Service", "Application"). I (<strong>Uğur Ö.</strong>, "Developer", "I") am an individual developer. By using the Service, you agree to the processing of information in accordance with this policy.</p>
+
+            <h2>1. Information Collected by the Developer</h2>
+            <p>I do not directly collect, store, or transmit any personally identifiable information (name, email, location, etc.) from you through the Service.</p>
+            <ul>
+                <li><strong>Requests and Suggestions:</strong> If you use the in-app feedback feature, an email is drafted via your device's mail app. Any information provided is used only to respond to you and is never shared.</li>
+            </ul>
+
+            <h2>2. Third-Party Services</h2>
+            <p>To keep the Service operational and free, the following third-party services are used. They may automatically collect technical data according to their own policies:</p>
+            <ul>
+                <li><strong>Advertising (Google AdMob & Unity Ads):</strong> They may collect data like Advertising ID, device type, IP address, and device location to show relevant and personalized ads.</li>
+                <li><strong>Analytics (Firebase):</strong> Used to diagnose crashes and improve app stability. These reports do not identify you personally.</li>
+                <li><strong>YouTube Player:</strong> Streams are powered by YouTube Android Player API and are subject to Google's Privacy Policy.</li>
+            </ul>
+
+            <h2>3. Cookies and Device Identifiers</h2>
+            <p>To keep our app free, we work with third-party advertising companies (e.g., Google AdMob). These companies may use device identifiers (e.g., Android Advertising ID), local storage technologies, and similar tools to show you personalized ads, measure ad performance, and prevent fraud.</p>
+
+            <h2>4. Purpose of Information Use</h2>
+            <ul>
+                <li>To provide and maintain the Service.</li>
+                <li>To identify and fix technical errors.</li>
+                <li>To display personalized or contextual ads to keep the Service free of charge.</li>
+            </ul>
+
+            <h2>5. Sharing of Information</h2>
+            <p>I do not share any personal information with third parties. As the app does not use VPN or traffic routing, your internet traffic is never monitored.</p>
+
+            <h2>6. Children's Privacy</h2>
+            <p>This Service is not directed to anyone under the age of 13. I do not knowingly collect data from children under 13.</p>
+
+            <h2>7. European Economic Area (EEA) and UK User Rights (GDPR)</h2>
+            <p>If you are located in the European Economic Area (EEA) or the United Kingdom (UK), the processing of your personal data (e.g., device IP address, advertising ID) is based on your explicit consent or our legitimate interest. Under the General Data Protection Regulation (GDPR) and UK GDPR, you have the following rights:</p>
+            <ul>
+                <li><strong>Right to Access:</strong> The right to know what data is collected about you.</li>
+                <li><strong>Right to Withdraw Consent:</strong> You can change or withdraw your consent for personalized ads at any time via the privacy settings or menu within the app.</li>
+                <li><strong>Right to Object:</strong> The right to object to the processing of your data.</li>
+            </ul>
+
+            <h2>8. Contact Me</h2>
+            <p>If you have any questions about this privacy policy or your data rights, feel free to contact me:</p>
+            <p><strong>Email:</strong> <a href="mailto:ugur2941@gmail.com">ugur2941@gmail.com</a></p>
+        </div>
+
+    </div>
+
+</body>
+</html>
 
